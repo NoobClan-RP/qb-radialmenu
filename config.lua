@@ -6,6 +6,49 @@ Config.EnableExtraMenu = true
 Config.Fliptime = 15000
 
 Config.MenuItems = {
+    -- Lizenz-Menü
+    {
+        id = "licences",
+        title = "Lizenzen und Führerscheine",
+        icon = "rectangle-list",
+        items = {
+            {
+                id = 'licence_id',
+                title = 'Personalausweis',
+                icon = 'address-book',
+                type = 'client',
+                event = 'qb-radialmenu:client:GiveID',
+                shouldClose = true,
+            },
+            {
+                id = 'licence_car',
+                title = 'Autoführerschein',
+                icon = 'address-book',
+                type = 'client',
+                event = 'qb-radialmenu:client:GiveCar',
+                shouldClose = true,
+            },
+            {
+                id = 'licence_bike',
+                title = 'Motorradführerschein',
+                icon = 'address-book',
+                type = 'client',
+                event = 'qb-radialmenu:client:GiveBike',
+                shouldClose = true,
+            },
+            {
+                id = 'licence_truck',
+                title = 'LKW-Führerschein',
+                icon = 'address-book',
+                type = 'client',
+                event = 'qb-radialmenu:client:GiveTruck',
+                shouldClose = true,
+            }
+        }
+    },
+
+
+    -- Build-in menüs
     {
         id = 'citizen',
         title = 'Citizen',
@@ -103,6 +146,14 @@ Config.MenuItems = {
         title = 'General',
         icon = 'rectangle-list',
         items = {
+            {
+              id = "vehiclekeys",
+              title = "Fahrzeugschlüssel",
+              icon = "key",
+              type = 'client',
+              event = "vehiclekeys:client:GiveKeys",
+              shouldClose = true  
+            },
             {
                 id = 'house',
                 title = 'House Interaction',
@@ -563,6 +614,14 @@ Config.JobInteractions = {
             icon = 'truck-pickup',
             type = 'client',
             event = 'qb-tow:client:TowVehicle',
+            shouldClose = true
+        },
+        {
+            id = 'forceunlockvehicle',
+            title = 'Fahrzeug aufbrechen',
+            icon = 'key',
+            type = 'client',
+            event = 'vehicles:keys:client:forceUnlockVehicle',
             shouldClose = true
         }
     },

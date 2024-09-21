@@ -18,12 +18,14 @@ client_scripts {
     'client/main.lua',
     'client/clothing.lua',
     'client/trunk.lua',
-    'client/stretcher.lua'
+    'client/stretcher.lua',
+    'client/licences.lua',
 }
 
 server_scripts {
     'server/trunk.lua',
-    'server/stretcher.lua'
+    'server/stretcher.lua',
+    'server/licences.lua',
 }
 
 files {
